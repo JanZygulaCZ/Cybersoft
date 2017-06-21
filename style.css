@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+}
+#wraper{
+	width: 80%;
+	margin: auto;
+}
+header{
+	width: 100%;
+	height: 200px;
+	background-color: #ffdf34;
+	line-height: 200px;
+	text-align: center;
+}
+.logo{
+	height: 60px; 
+	vertical-align: middle;
+}
+.leftside{
+	min-height: 1030px;
+	width: 20%;
+	background-color: red;
+	float: left;
+	text-align: center;
+}
+.rightside{
+	min-height: 1030px;
+	width: 80%;
+	background-color: blue;
+	float: right;
+	text-align: center;
+}
+.button{
+	padding-top: 30px;
+	padding-bottom: 20px;
+	height: 30px;
+}
+.button a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px 5px;
+	border: 2px white solid;
+}
+.galery{
+	padding-top: 10px;
+}
+.galery img{
+	padding: 5px;
+	margin: 0;
+}
+.table{
+	margin:30px;
+}
+table{
+	margin: auto;
+}
+table td, th{
+	border: 1px black solid;
+}
+.footer{
+	margin-top: -16px;
+	width: 100%;
+	height: 150px;
+	background-color: darkgray;
+	line-height: 150px;
+}
+.footer p{
+	color: white;
+	text-align: center;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+@media(max-width:767px) {
+.leftside{
+	min-height: 50px;
+	width: 100%;
+	background-color: red;
+	float: none;
+	text-align: center;
+}
+.rightside{
+	min-height: 50px;
+	width: 100%;
+	background-color: blue;
+	float: none;
+	text-align: center;
+}
+}
