@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Testovací stránka</title>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+        <link href="css/lightbox.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+
+    </head>
+    <body>
+    
+    <div id="wraper">    
+	    <header>
+	    	<div class="container">
+	    		<a href="https://www.cybersoft.cz">
+	    			<img src="logo.png" alt="" class="logo">
+	    		</a>
+	    	</div>	
+	    </header>
+
+	    <div class="leftside">
+	    	<div class="button">
+	    		<a href="#"> Download <span class="fa fa-user download"></span></a>
+	    	</div>
+	    </div>
+
+	    <div class="rightside">
+	    	<div class="galery">
+	    		<a href="img2.jpg" data-lightbox="roadtrip"><img src="img.jpg" alt=""></a>
+	    		<a href="img2.jpg" data-lightbox="roadtrip"><img src="img.jpg" alt=""></a>
+	    		<a href="img2.jpg" data-lightbox="roadtrip"><img src="img.jpg" alt=""></a>
+	    		<a href="img2.jpg" data-lightbox="roadtrip"><img src="img.jpg" alt=""></a>
+	    		<a href="img2.jpg" data-lightbox="roadtrip"><img src="img.jpg" alt=""></a>
+	    		<a href="img2.jpg" data-lightbox="roadtrip"><img src="img.jpg" alt=""></a>
+	    		<a href="img2.jpg" data-lightbox="roadtrip"><img src="img.jpg" alt=""></a>
+	    		<a href="img2.jpg" data-lightbox="roadtrip"><img src="img.jpg" alt=""></a>     
+		    </div>
+		    <div class="table">
+		    	<table>
+		    		<tr>
+						<th>Města</th>
+					    <td>Počet obyvatel</td>
+					</tr>
+					<tr>
+						<th>Praha</th>
+					    <td>1286008</td>
+					</tr>
+					<tr>
+					    <th>Brno</th>
+					    <td>378327</td>
+					</tr>
+					<tr>
+						<th>Ostrava</th>
+					    <td>297421</td>
+					</tr>
+				</table>
+    		</div>
+    		<div id="map"></div>
+    	</div>
+
+    	<div style="clear:both"></div>
+
+    	<div class="footer">
+    		<p>Jan Zygula © 2017</p>
+    	</div>
+    </div>
+
+
+ <script>
+
+      function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6,
+          center: {lat: 49.846, lng: 15.659}
+        });
+
+        var labels = '123';
+
+        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+
+
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+      var locations = [
+      	{lat: 50.086981, lng: 14.4209343,},
+      	{lat: 49.1951433, lng: 16.6073741},
+        {lat: 49.828874, lng: 18.2637708}
+
+      ]
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-k1tslgsERX4xPL7JoZTCLxST3qx4nKo&callback=initMap">
+    </script>
+    <script src="js/lightbox-plus-jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+	<script>
+	window.addEventListener("load", function(){
+	window.cookieconsent.initialise({
+  	"palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  }
+})});
+</script>
+    </body>
+</html>
